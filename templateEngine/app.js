@@ -6,8 +6,7 @@ app.get('/', function(req, res) {
     res.sendFile(__dirname + '/index.html')
 })
 
-app.get('/contact', function(req, res) {
-    res.sendFile(__dirname + '/contact.html')
+app.get('/contact', function(req, res) {res.render('contact', {qs: req.query})
 })
 
 app.get('/profile/:name', function(req, res) {
